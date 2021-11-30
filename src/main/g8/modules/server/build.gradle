@@ -1,0 +1,20 @@
+apply plugin: 'com.bmuschko.docker-java-application'
+apply plugin: 'org.jetbrains.kotlin.plugin.serialization'
+
+dependencies {
+    api "io.ktor:ktor-server-core:\$ktorVersion"
+    api "io.ktor:ktor-server-netty:\$ktorVersion"
+    api "io.ktor:ktor-metrics-micrometer:\$ktorVersion"
+    api "org.jetbrains.kotlinx:kotlinx-serialization-json:\$kotlinxSerializationVersion"
+
+    testImplementation "io.ktor:ktor-server-test-host:\$ktorVersion"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+}
+
+docker {
+    javaApplication {
+        baseImage = 'openjdk:11-jre-slim-buster'
+        ports = [8080]
+        jvmArgs = ['-Xms256m', '-Xmx2048m']
+    }
+}
