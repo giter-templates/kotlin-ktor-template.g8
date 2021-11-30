@@ -20,7 +20,6 @@ subprojects {
         api "ch.qos.logback:logback-classic:\$logbackVersion"
         api "org.jetbrains.kotlinx:kotlinx-serialization-json:\$kotlinxSerializationVersion"
         api "io.micrometer:micrometer-registry-prometheus:\$prometheusVersion"
-        testImplementation "io.ktor:ktor-server-test-host:\$kotlinVersion"
         testImplementation "org.jetbrains.kotlin:kotlin-test:\$kotlinVersion"
     }
 
