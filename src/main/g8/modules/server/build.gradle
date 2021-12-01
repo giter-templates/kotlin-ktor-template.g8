@@ -5,6 +5,7 @@ dependencies {
     api "io.ktor:ktor-server-core:\$ktorVersion"
     api "io.ktor:ktor-server-netty:\$ktorVersion"
     api "io.ktor:ktor-metrics-micrometer:\$ktorVersion"
+    api "io.ktor:ktor-serialization:\$ktorVersion"
     api "org.jetbrains.kotlinx:kotlinx-serialization-json:\$kotlinxSerializationVersion"
 
     testImplementation "io.ktor:ktor-server-test-host:\$ktorVersion"
